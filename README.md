@@ -14,3 +14,6 @@
 - DC + je pro to, aby do Relé proudil proud.
 - DC - je pro uzemnění Relé s deskou.
 - IN je vstup, přes který budeš relé ovládat.
+
+# Stažení
+Kódy normálně stáhní a otevři je v arduino IDE, pak jen stačí kliknout na verify a následně na upload
