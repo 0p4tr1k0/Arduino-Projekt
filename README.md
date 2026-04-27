@@ -16,7 +16,7 @@
 - IN je vstup, přes který budeš relé ovládat.
 
 # Stažení
-Kódy normálně stáhní a otevři je v arduino IDE.
+- Kódy normálně stáhní a otevři je v arduino IDE.
 
 # Připojení na web server
 - V Arduino IDE klikni na "Verify" a pak "Upload"
