@@ -1,7 +1,7 @@
 # Arduino-Projekt
 
 # Projekt
--Tento kód slouží čistě pro LEDku na ESP32
+- Tento kód slouží čistě pro LEDku na ESP32
 
 
 # Projekt_rele
@@ -16,4 +16,9 @@
 - IN je vstup, přes který budeš relé ovládat.
 
 # Stažení
-Kódy normálně stáhní a otevři je v arduino IDE, pak jen stačí kliknout na verify a následně na upload
+Kódy normálně stáhní a otevři je v arduino IDE.
+
+# Připojení na web server
+- V Arduino IDE klikni na "Verify" a pak "Upload"
+- V arduino IDE si rozklikni v pravém horním rohu "serial monitor". Tam následně bys po spuštění měla vidět lokální ip (192.168.xxx.xx).
+- To zadej do prohlížeče (Zařízení, kde to chceš otevřít, musí být na stejné Wi-Fi, kterou jsi zadala v kódu.
