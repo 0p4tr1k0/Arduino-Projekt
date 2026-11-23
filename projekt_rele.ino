@@ -1,8 +1,8 @@
 #include <WiFi.h>
 
 // Replace with your Wi-Fi credentials
-const char* ssid = "AP_MLCAKOVA";
-const char* password = "MlcakovaAP120";
+const char* ssid = "YOUR_WIFI_SSID";
+const char* password = "YOUR_WIFI_PASSWORD";
 
 // Set LED pin (usually GPIO 2)
 const int ledPin = 2;
