@@ -1,26 +1,34 @@
-# Arduino-Projekt
+# ESP32 Wi-Fi Web Server – ovládání LED a relé modulu
 
-## Projekt
-- Tento kód slouží čistě pro LEDku na ESP32
+Jednoduchý IoT projekt pro mikrokontroler **ESP32** napsaný v **Arduino IDE**. Zařízení se připojí k lokální Wi-Fi síti, spustí vestavěný HTTP webový server a umožní ovládat vestavěnou LED nebo externí relé modul přímo z webového prohlížeče.
 
+## Obsah repozitáře
 
-## Projekt_rele
-- Tento kód je potřeba pro ovládání relé, které musíš zapojit k ESP32
-- Vezmi si tři káblíky
+| Soubor | Popis |
+| :--- | :--- |
+| `Projekt.ino` | Webové rozhraní pro ovládání vestavěné LED na desce ESP32. |
+| `projekt_rele.ino` | Webové rozhraní pro spínání externího relé modulu připojeného k ESP32. |
 
-## Zapojení
-1. Káblík spoj s DC+ (RELÉ) s 3V3 (ESP 32)
-2. Káblík spoj s DC- (RELÉ) s GND (ESP 32)
-3. Káblík spoj s IN (RELÉ) s D14 (ESP 32)
+## Schéma zapojení (relé modul)
 
-- DC + je pro to, aby do Relé proudil proud.
-- DC - je pro uzemnění Relé s deskou.
-- IN je vstup, přes který budeš relé ovládat.
+![Schéma zapojení ESP32 a relé](schema_zapojeni.png)
 
-## Stažení
-- Kódy normálně stáhní a otevři je v arduino IDE.
+| Pin na ESP32 | Pin na relé modulu | Funkce |
+| :--- | :--- | :--- |
+| **3V3** | **DC+** | Napájení relé modulu (+3,3 V) |
+| **GND** | **DC-** | Společná zem (uzemnění) |
+| **D14** *(GPIO 14)* | **IN** | Řídicí signál pro spínání relé |
 
-## Připojení na web server
-- V Arduino IDE klikni na "Verify" a pak "Upload"
-- V arduino IDE si rozklikni v pravém horním rohu "serial monitor". Tam následně bys po spuštění měla vidět lokální ip (192.168.xxx.xx).
-- To zadej do prohlížeče (Zařízení, kde to chceš otevřít, musí být na stejné Wi-Fi, kterou jsi zadala v kódu.
+## Požadavky
+
+* Deska **ESP32** (např. ESP32 DevKit)
+* Relé modul a 3 propojovací vodiče *(pro variantu `projekt_rele.ino`)*
+* **Arduino IDE** s nainstalovanou podporou desek ESP32
+
+## Postup spuštění
+
+1. Stáhněte repozitář a otevřete zvolený soubor (`.ino`) v **Arduino IDE**.
+2. V kódu doplňte přihlašovací údaje k vaší lokální Wi-Fi síti (`SSID` a heslo).
+3. Připojte ESP32 přes USB, zvolte správnou desku a COM port, poté klikněte na **Verify** a **Upload**.
+4. Otevřete **Serial Monitor** (pravý horní roh v Arduino IDE) – po připojení k Wi-Fi se vypíše přidělená lokální IP adresa (např. `192.168.x.x`).
+5. Zadejte vypsanou IP adresu do prohlížeče na počítači nebo telefonu připojeném ke **stejné Wi-Fi síti**.
