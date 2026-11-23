@@ -1,8 +1,8 @@
 #include <WiFi.h>
 
 // Tvé údaje k Wi-Fi sítě
-const char* ssid = "AP_MLCAKOVA";
-const char* password = "MlcakovaAP120";
+const char* ssid = "YOUR_WIFI_SSID";
+const char* password = "YOUR_WIFI_PASSWORD";
 
 // Nastavení pinu pro LED (obvykle GPIO 2)
 const int ledPin = 2;
